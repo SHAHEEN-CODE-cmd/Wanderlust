@@ -60,9 +60,9 @@ router.put("/:id",validateListing, wrapAsync(async(req,res)=>{
         let listing = await Listing.findById(id);
 
     // If no new image url provided, keep the old one
-    if (!req.body.listing.image || !req.body.listing.image.url) {
-        req.body.listing.image = listing.image;
-    }
+    // if (!req.body.listing.image || !req.body.listing.image.url) {
+    //     req.body.listing.image = listing.image;
+    // }
     await Listing.findByIdAndUpdate(id,{...req.body.listing});
     req.flash("success","Listing Updated!");
     res.redirect(`/listings/${id}`);

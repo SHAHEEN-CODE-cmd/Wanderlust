@@ -8,22 +8,12 @@ const ListingSchema= new Schema({
         required:true,
     },
     description:String,
-    // image:{
-    //  type:String,
-    //  filename: String,
-    //    url: {
-    //     default:"https://tse1.mm.bing.net/th/id/OIP.4bVZw62rX340DxNH_qZzAAHaE8?w=5137&h=3425&rs=1&pid=ImgDetMain&o=7&rm=3",
-    //     set:(v)=> v === ""? "https://tse1.mm.bing.net/th/id/OIP.4bVZw62rX340DxNH_qZzAAHaE8?w=5137&h=3425&rs=1&pid=ImgDetMain&o=7&rm=3" : v,
-    //    }
-    //   },
-     image: {
-    filename: String,
-    url: {
-      type: String,
-      default: "https://tse1.mm.bing.net/th/id/OIP.4bVZw62rX340DxNH_qZzAAHaE8?w=5137&h=3425&rs=1&pid=ImgDetMain&o=7&rm=3",
-      set:(v)=> v === ""? "https://tse1.mm.bing.net/th/id/OIP.4bVZw62rX340DxNH_qZzAAHaE8?w=5137&h=3425&rs=1&pid=ImgDetMain&o=7&rm=3" : v,
-    }
-  },
+    image:{
+     type:String,
+        default:"https://tse1.mm.bing.net/th/id/OIP.4bVZw62rX340DxNH_qZzAAHaE8?w=5137&h=3425&rs=1&pid=ImgDetMain&o=7&rm=3",
+        set:(v)=> v === ""? "https://tse1.mm.bing.net/th/id/OIP.4bVZw62rX340DxNH_qZzAAHaE8?w=5137&h=3425&rs=1&pid=ImgDetMain&o=7&rm=3" : v,
+      },
+
     price:Number,
     location:String,
     country:String,
