@@ -33,7 +33,7 @@ body{
 }
 
 .f-info-links, .f-info-socials, .f-info-brand{
-    width:100%;
+    width:100% !important;
     display:flex;
     align-items: center;
     justify-content: center;
@@ -54,6 +54,14 @@ body{
     justify-content: center;
     align-items: space-evenly;
 }
+
+footer {
+  width: 100%;
+  position: relative;
+  left: 0;
+  bottom: 0;
+}
+
 
 .listing-card{
     border:none !important;
